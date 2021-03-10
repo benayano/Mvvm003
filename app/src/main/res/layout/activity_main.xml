@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/main_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:hint="number 2"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/second_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="number 2"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/operator_text" />
+
+    <TextView
+        android:id="@+id/operator_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="operator"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_text" />
+
+
+    <!--    <EditText-->
+<!--        android:id="@+id/main_edit"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:hint="pleas enter text"-->
+<!--        android:textSize="25sp"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/main_text" />-->
+<!--   the equal is pivot -->
+    <Button
+        android:id="@+id/equal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="="
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/resolt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="TextView"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/second_text"
+        app:layout_constraintStart_toStartOf="@+id/second_text"
+        app:layout_constraintTop_toBottomOf="@+id/second_text" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="+"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/equal"
+        app:layout_constraintStart_toStartOf="@+id/equal"
+        app:layout_constraintEnd_toEndOf="@+id/equal" />
+    <Button
+        android:id="@+id/sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="-"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/add"
+        app:layout_constraintStart_toStartOf="@+id/equal"
+        app:layout_constraintEnd_toEndOf="@+id/equal" />
+    <Button
+        android:id="@+id/multi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="*"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/sub"
+        app:layout_constraintStart_toStartOf="@+id/equal"
+        app:layout_constraintEnd_toEndOf="@+id/equal" />
+    <Button
+        android:id="@+id/division"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="/"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/multi"
+        app:layout_constraintStart_toStartOf="@+id/equal"
+        app:layout_constraintEnd_toEndOf="@+id/equal" />
+    <!--column 1-->
+    <Button
+        android:id="@+id/dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="."
+        app:layout_constraintEnd_toStartOf="@+id/equal"
+        app:layout_constraintTop_toTopOf="@+id/equal"
+        app:layout_constraintBottom_toBottomOf="@+id/equal"/>
+    <Button
+        android:id="@+id/num3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="3"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/dot"
+        app:layout_constraintStart_toStartOf="@+id/dot"
+        app:layout_constraintEnd_toEndOf="@+id/dot" />
+    <Button
+        android:id="@+id/num6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="6"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/add"
+        app:layout_constraintStart_toStartOf="@+id/dot"
+        app:layout_constraintEnd_toEndOf="@+id/dot" />
+    <Button
+        android:id="@+id/num9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="9"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/sub"
+        app:layout_constraintStart_toStartOf="@+id/dot"
+        app:layout_constraintEnd_toEndOf="@+id/dot" />
+    <Button
+        android:id="@+id/percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="%"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/multi"
+        app:layout_constraintStart_toStartOf="@+id/dot"
+        app:layout_constraintEnd_toEndOf="@+id/dot" />
+    <!--column 2-->
+    <Button
+        android:id="@+id/num0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="0"
+        app:layout_constraintEnd_toStartOf="@+id/dot"
+        app:layout_constraintTop_toTopOf="@+id/dot"
+        app:layout_constraintBottom_toBottomOf="@+id/dot"/>
+    <Button
+        android:id="@+id/num2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="2"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/num0"
+        app:layout_constraintStart_toStartOf="@+id/num0"
+        app:layout_constraintEnd_toEndOf="@+id/num0" />
+    <Button
+        android:id="@+id/num5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="5"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/add"
+        app:layout_constraintStart_toStartOf="@+id/num0"
+        app:layout_constraintEnd_toEndOf="@+id/num0" />
+    <Button
+        android:id="@+id/num8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="8"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/sub"
+        app:layout_constraintStart_toStartOf="@+id/num0"
+        app:layout_constraintEnd_toEndOf="@+id/num0" />
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="d"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/multi"
+        app:layout_constraintStart_toStartOf="@+id/num0"
+        app:layout_constraintEnd_toEndOf="@+id/num0" />
+    <!--column 3-->
+    <Button
+        android:id="@+id/pivotFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="p"
+        app:layout_constraintEnd_toStartOf="@+id/num0"
+        app:layout_constraintTop_toTopOf="@+id/num0"
+        app:layout_constraintBottom_toBottomOf="@+id/num0"/>
+    <Button
+        android:id="@+id/num1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="1"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/pivotFragment"
+        app:layout_constraintStart_toStartOf="@+id/pivotFragment"
+        app:layout_constraintEnd_toEndOf="@+id/pivotFragment" />
+    <Button
+        android:id="@+id/num4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="4"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/add"
+        app:layout_constraintStart_toStartOf="@+id/pivotFragment"
+        app:layout_constraintEnd_toEndOf="@+id/pivotFragment" />
+    <Button
+        android:id="@+id/num7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="7"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/sub"
+        app:layout_constraintStart_toStartOf="@+id/pivotFragment"
+        app:layout_constraintEnd_toEndOf="@+id/pivotFragment" />
+    <Button
+        android:id="@+id/initCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="c"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/multi"
+        app:layout_constraintStart_toStartOf="@+id/pivotFragment"
+        app:layout_constraintEnd_toEndOf="@+id/pivotFragment" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
